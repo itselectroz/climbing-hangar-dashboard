@@ -4,21 +4,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className='weight'>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App h-screen bg-color-primary-background font-Roboto content-center">
+      <div className="">
+        <div className="font-bold text-7xl text-color-primary-text">57</div>
+        <div className="text-color-primary-text">People are currently in the hangar</div>
+      </div>
     </div>
   );
 }
