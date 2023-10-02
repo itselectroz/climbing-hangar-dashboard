@@ -5,13 +5,14 @@ module.exports = {
     extend: {
       colors: {
         transparent: "transparent",
-        "color-primary-background": "#363a45",
-        "color-secondary-background": "#272B34",
+        "color-primary-background": "#272B34",
+        "color-secondary-background": "#363a45",
         "color-primary": "#378DFB",
+        "color-accent": "#e6407a",
         "color-danger": "#FF4B4C",
         "color-success": "#63DC93",
         "color-primary-text": "#FFFFFF",
-        "color-secondary-text": "#8F96A8",
+        "color-secondary-text": "#a6a6a6",
       },
 
       fontFamily: {
