@@ -18,12 +18,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "REACT_APP_EMULATOR=true react-scripts start",
     "start": "react-scripts start",
     "build-functions": "cd functions && npm run build && cd ..",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && npm run build-functions && firebase deploy"
+    "deploy": "npm run build && npm run build-functions && firebase deploy",
+    "emulators": "firebase emulators:start"
   },
   "eslintConfig": {
     "extends": [
