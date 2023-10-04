@@ -3,14 +3,16 @@ import logo from "./logo.svg";
 import "./App.css";
 import Stat from "./components/Stat";
 import Card from "./components/Card";
+import colors from "../tailwind.config.js";
 
 function App() {
+  // TODO: Don't know a better way to do this yet
   document.documentElement.style.height = "fill-available";
-  document.documentElement.style.backgroundColor = "bg-color-primary";
+  document.documentElement.classList.add("bg-color-primary-background");
   // document.body.style.height = "100vh";
 
   return (
-    <div className="App h-screen bg-color-primary-background font-Roboto content-center">
+    <div className="App flex flex-col h-screen bg-color-primary-background font-Roboto content-center md:justify-center md:gap-20">
       <div className="flex flex-col justify-center items-center">
         {/* Header */}
         <div className="flex flex-row justify-center items-center gap-28 mt-10">
@@ -62,11 +64,11 @@ function App() {
         {/* Stats */}
         <div className="flex flex-col flex-wrap justify-center items-center gap-20 mt-20 md:flex-row">
           <div className="flex flex-col justify-center items-center gap-4">
-            <div className="font-black text-6xl text-color-primary-text">
+            <div className="font-black text-6xl text-color-primary-text md:text-8xl">
               57
             </div>
             <div className="flex flex-col justify-center items-center gap-1">
-              <div className="text-color-primary-text text-md">
+              <div className="text-color-primary-text text-md md:text-lg">
                 People in the hangar
               </div>
               {/* Last updated container */}
@@ -86,9 +88,9 @@ function App() {
       </div>
 
       {/* Graphs */}
-      <div className="h-2/5 flex flex-col justify-center items-center gap-5 mt-20 md:flex-row">
+      <div className="flex flex-col justify-center items-center gap-5 mt-20 md:flex-row md:h-1/3 md:justify-evenly md:gap-0">
         <Card></Card>
-        <Card></Card>
+        <Card className="mb-10 md:mb-0"></Card>
       </div>
     </div>
   );

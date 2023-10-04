@@ -1,8 +1,14 @@
 import React from "react";
 
-const Card = () => {
+type CardProps = {
+  className?: string;
+};
+
+const Card = ({ className }: CardProps) => {
   return (
-    <div className="bg-color-secondary-background w-11/12 h-2/3 rounded-xl md:max-w-md md:w-5/12"></div>
+    <div
+      className={`bg-color-secondary-background w-11/12 h-48 rounded-xl md:h-full md:w-card md:max-w-xl ${className}`}
+    ></div>
   );
 };
 
