@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Stat from "./components/Stat";
 import Card from "./components/Card";
-import colors from "../tailwind.config.js";
 
 function App() {
   // TODO: Don't know a better way to do this yet
@@ -35,7 +34,7 @@ function App() {
           </div>
 
           {/* Title */}
-          <div className="flex flex-col gap-0.5 justify-center items-center">
+          <div className="flex flex-col gap-0.5 justify-center items-center hidden md:block">
             <div className="text-color-primary-text text-4xl">Monday</div>
             <div className="text-color-secondary-text text-sm">
               1st September
@@ -64,26 +63,35 @@ function App() {
         {/* Stats */}
         <div className="flex flex-col flex-wrap justify-center items-center gap-20 mt-20 md:flex-row">
           <div className="flex flex-col justify-center items-center gap-4">
-            <div className="font-black text-6xl text-color-primary-text md:text-8xl">
-              57
-            </div>
-            <div className="flex flex-col justify-center items-center gap-1">
-              <div className="text-color-primary-text text-md md:text-lg">
+            <div className="font-bold text-8xl text-color-primary-text">57</div>
+            <div className="flex flex-col justify-center items-center gap-3 md:gap-1">
+              <div className="text-color-primary-text font-light text-2xl md:text-lg">
                 People in the hangar
               </div>
               {/* Last updated container */}
               <div className="flex flex-row justify-center items-center gap-2 rounded-2xl py-2 px-4 bg-color-secondary-background">
-                <div className="w-2 h-2 rounded-full bg-color-success"></div>
-                <div className="text-white text-xs font-semibold">
+                <div className="w-3 h-3 rounded-full bg-color-success md:w-2 h-2"></div>
+                <div className="text-white text-sm font-bold md:text-xs">
                   Last Updated: 2m ago
                 </div>
               </div>
             </div>
           </div>
-          <Stat className="md:order-first" content="2h 30m">
+          {/* Stats for mobile */}
+          <div className="flex flex-row flex-evenly md:hidden">
+            <Stat className="md:order-first" content="2h 30m">
+              Until peak time
+            </Stat>
+            <Stat content="103">Expected peak for today</Stat>
+          </div>
+
+          {/* Stats for desktop */}
+          <Stat className="hidden md:order-first md:block" content="2h 30m">
             Until peak time
           </Stat>
-          <Stat content="103">Expected peak for today</Stat>
+          <Stat className="hidden md:block" content="103">
+            Expected peak for today
+          </Stat>
         </div>
       </div>
 

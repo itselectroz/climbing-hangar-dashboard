@@ -16,11 +16,7 @@ module.exports = {
       },
 
       fontFamily: {
-        'sans': ['Roboto', 'sans-serif'],
-      },
-
-      aspectRatio: {
-        'card': '542 / 273',
+        'sans': ['Roboto', 'sans'],
       },
 
       width: {

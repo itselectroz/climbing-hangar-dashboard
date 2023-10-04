@@ -7,7 +7,7 @@ type CardProps = {
 const Card = ({ className }: CardProps) => {
   return (
     <div
-      className={`bg-color-secondary-background w-11/12 h-48 rounded-xl md:h-full md:w-card md:max-w-xl ${className}`}
+      className={`bg-color-secondary-background shadow-lg w-11/12 h-48 rounded-xl md:h-full md:w-card md:max-w-xl ${className}`}
     ></div>
   );
 };
