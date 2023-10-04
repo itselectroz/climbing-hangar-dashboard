@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import App from "./routes/App";
+import Navbar from "./components/Navbar";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,9 +14,26 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <NavbarWrapper />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+    ],
   },
 ]);
+
+function NavbarWrapper() {
+  return (
+    <>
+      <Navbar />
+      <div className="ml-64">
+        <Outlet />
+      </div>
+    </>
+  );
+}
 
 root.render(
   <React.StrictMode>
