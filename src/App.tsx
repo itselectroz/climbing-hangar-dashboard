@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App flex flex-col h-screen bg-color-primary-background font-Roboto content-center md:justify-center md:gap-20">
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center md:gap-12">
         {/* Header */}
         <div className="flex flex-row justify-center items-center gap-28 mt-10">
           {/* Arrow */}
@@ -35,8 +35,8 @@ function App() {
 
           {/* Title */}
           <div className="flex flex-col gap-0.5 justify-center items-center hidden md:block">
-            <div className="text-color-primary-text text-4xl">Monday</div>
-            <div className="text-color-secondary-text text-sm">
+            <div className="text-color-primary-text text-5xl">Monday</div>
+            <div className="text-color-secondary-text text-lg">
               1st September
             </div>
           </div>
@@ -61,9 +61,11 @@ function App() {
         </div>
 
         {/* Stats */}
-        <div className="flex flex-row flex-wrap justify-center items-center gap-20 mt-20 md:flex-row">
-          <div className="flex flex-col justify-center items-center gap-4 w-96 md:w-54">
-            <div className="font-bold text-8xl text-color-primary-text">57</div>
+        <div className="flex flex-row flex-wrap justify-evenly items-center gap-y-20 mt-20 md:gap-40">
+          <div className="flex flex-col justify-center items-center gap-4 w-full md:w-auto">
+            <div className="font-bold text-7xl text-color-primary-text md:text-8xl">
+              57
+            </div>
             <div className="flex flex-col justify-center items-center gap-3 md:gap-1">
               <div className="text-color-primary-text font-light text-2xl md:text-lg">
                 People in the hangar
@@ -77,7 +79,7 @@ function App() {
               </div>
             </div>
           </div>
-          {/* Stats for mobile */}
+          {/* Stat Components */}
           <Stat className="md:order-first" content="2h 30m">
             Until peak time
           </Stat>
@@ -86,7 +88,7 @@ function App() {
       </div>
 
       {/* Graphs */}
-      <div className="flex flex-col justify-center items-center gap-5 mt-20 md:flex-row md:h-1/3 md:justify-evenly md:gap-0">
+      <div className="flex flex-col justify-center items-center gap-5 mt-20 md:mt-0 md:flex-row md:h-1/3 md:justify-evenly md:gap-0">
         <Card></Card>
         <Card className="mb-10 md:mb-0"></Card>
       </div>
