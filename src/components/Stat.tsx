@@ -9,7 +9,7 @@ type StatProps = {
 const Stat = ({ children, content, className }: StatProps) => {
   return (
     <div
-      className={`text-white flex justify-center align-center flex-col gap-4 w-56 ${className}`}
+      className={`text-white flex justify-center align-center flex-col gap-4 md:w-56 ${className}`}
     >
       <div className="font-bold text-5xl md:text-6xl">{content}</div>
       <div className="font-light text-xs md:text-sm">{children}</div>

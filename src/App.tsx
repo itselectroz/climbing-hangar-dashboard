@@ -61,8 +61,8 @@ function App() {
         </div>
 
         {/* Stats */}
-        <div className="flex flex-col flex-wrap justify-center items-center gap-20 mt-20 md:flex-row">
-          <div className="flex flex-col justify-center items-center gap-4">
+        <div className="flex flex-row flex-wrap justify-center items-center gap-20 mt-20 md:flex-row">
+          <div className="flex flex-col justify-center items-center gap-4 w-96 md:w-54">
             <div className="font-bold text-8xl text-color-primary-text">57</div>
             <div className="flex flex-col justify-center items-center gap-3 md:gap-1">
               <div className="text-color-primary-text font-light text-2xl md:text-lg">
@@ -78,20 +78,10 @@ function App() {
             </div>
           </div>
           {/* Stats for mobile */}
-          <div className="flex flex-row flex-evenly md:hidden">
-            <Stat className="md:order-first" content="2h 30m">
-              Until peak time
-            </Stat>
-            <Stat content="103">Expected peak for today</Stat>
-          </div>
-
-          {/* Stats for desktop */}
-          <Stat className="hidden md:order-first md:block" content="2h 30m">
+          <Stat className="md:order-first" content="2h 30m">
             Until peak time
           </Stat>
-          <Stat className="hidden md:block" content="103">
-            Expected peak for today
-          </Stat>
+          <Stat content="103">Expected peak for today</Stat>
         </div>
       </div>
 
