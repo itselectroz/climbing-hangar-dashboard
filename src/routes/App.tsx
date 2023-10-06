@@ -1,9 +1,10 @@
 import React from "react";
-import data from "../mock-data.json";
+import Data from "../mock-data.json";
 // import logo from "./logo.svg";
 import "./App.css";
 import Stat from "../components/Stat";
 import Card from "../components/Card";
+import Calc from "../components/Calc";
 
 function App() {
   // TODO: Don't know a better way to do this yet
@@ -11,12 +12,18 @@ function App() {
   document.documentElement.classList.add("bg-color-primary-background");
   // document.body.style.height = "100vh";
 
-  // Finding day of week from timestamp
-  let tmpStamp = 654524560;
-  let tmpDate = new Date();
-  tmpDate.setTime(tmpStamp * 1000);
+  // Find out current day
+  let currentDay = new Date().getDay();
 
-  console.log(tmpDate.getDay());
+  let dayPeak: { [key: number]: string } = {
+    0: "avgSundayPeak",
+    1: "avgMondayPeak",
+    2: "avgTuesdayPeak",
+    3: "avgWednesdayPeak",
+    4: "avgThursdayPeak",
+    5: "avgFridayPeak",
+    6: "avgSaturdayPeak",
+  };
 
   return (
     <div className="App flex flex-col h-screen bg-color-primary-background font-Roboto content-center md:justify-center md:gap-20">
@@ -91,7 +98,9 @@ function App() {
           <Stat className="md:order-first" content="2h 30m">
             Until peak time
           </Stat>
-          <Stat content="103">Expected peak for today</Stat>
+          <Stat content={Calc[dayPeak[currentDay]].toString()}>
+            Expected peak for today
+          </Stat>
         </div>
       </div>
 
