@@ -1,0 +1,33 @@
+#navbar a {
+  position: relative;
+  align-self: flex-start;
+}
+
+#navbar a::after {
+  content: '';
+
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+
+  width: 0%;
+  height: 1px;
+  background-color: theme('colors.color-accent');
+}
+
+#navbar a.active {
+  color: theme('colors.color-primary-text');
+}
+
+#navbar a.active::after {
+  width: 100%;
+}
+
+#navbar a:hover {
+  color: theme('colors.color-primary-text');
+}
+
+#navbar a:hover::after {
+  transition: width 0.2s;
+  width: 100%;
+}
