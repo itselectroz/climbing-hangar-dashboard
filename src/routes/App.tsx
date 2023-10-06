@@ -1,8 +1,8 @@
 import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-import Stat from "./components/Stat";
-import Card from "./components/Card";
+import Stat from "../components/Stat";
+import Card from "../components/Card";
 
 function App() {
   // TODO: Don't know a better way to do this yet
