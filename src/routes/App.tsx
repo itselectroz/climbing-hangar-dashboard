@@ -1,22 +1,14 @@
-import React from "react";
-// import logo from "./logo.svg";
-import "./App.css";
 import Stat from "../components/Stat";
 import Card from "../components/Card";
 
 function App() {
-  // TODO: Don't know a better way to do this yet
-  document.documentElement.style.height = "fill-available";
-  document.documentElement.classList.add("bg-color-primary-background");
-  // document.body.style.height = "100vh";
-
   return (
-    <div className="App flex flex-col h-screen bg-color-primary-background font-Roboto content-center md:justify-center md:gap-20">
+    <div className="App h-screen bg-dark-grey font-Roboto content-center text-center md:justify-center md:gap-20">
       <div className="flex flex-col justify-center items-center md:gap-12">
         {/* Header */}
         <div className="flex flex-row justify-center items-center gap-28 mt-10">
           {/* Arrow */}
-          <div className="text-color-accent cursor-pointer hidden md:block">
+          <div className="text-pink cursor-pointer hidden md:block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,14 +27,12 @@ function App() {
 
           {/* Title */}
           <div className="flex flex-col gap-0.5 justify-center items-center hidden md:block">
-            <div className="text-color-primary-text text-5xl">Monday</div>
-            <div className="text-color-secondary-text text-lg">
-              1st September
-            </div>
+            <div className="text-white text-5xl">Monday</div>
+            <div className="text-light-grey text-lg">1st September</div>
           </div>
 
           {/* Arrow */}
-          <div className="text-color-accent cursor-pointer hidden md:block">
+          <div className="text-pink cursor-pointer hidden md:block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -63,16 +53,14 @@ function App() {
         {/* Stats */}
         <div className="flex flex-row flex-wrap justify-evenly items-center gap-y-20 mt-20 md:gap-40">
           <div className="flex flex-col justify-center items-center gap-4 w-full md:w-auto">
-            <div className="font-bold text-7xl text-color-primary-text md:text-8xl">
-              57
-            </div>
+            <div className="font-bold text-7xl text-white md:text-8xl">57</div>
             <div className="flex flex-col justify-center items-center gap-3 md:gap-1">
-              <div className="text-color-primary-text font-light text-2xl md:text-lg">
+              <div className="text-white font-light text-2xl md:text-lg">
                 People in the hangar
               </div>
               {/* Last updated container */}
-              <div className="flex flex-row justify-center items-center gap-2 rounded-2xl py-2 px-4 bg-color-secondary-background">
-                <div className="w-3 h-3 rounded-full bg-color-success md:w-2 h-2"></div>
+              <div className="flex flex-row justify-center items-center gap-2 rounded-2xl py-2 px-4 bg-grey">
+                <div className="w-3 h-3 rounded-full bg-green animate-pulse md:w-2 md:h-2"></div>
                 <div className="text-white text-sm font-bold md:text-xs">
                   Last Updated: 2m ago
                 </div>
@@ -88,7 +76,7 @@ function App() {
       </div>
 
       {/* Graphs */}
-      <div className="flex flex-col justify-center items-center gap-5 mt-20 md:mt-0 md:flex-row md:h-1/3 md:justify-evenly md:gap-0">
+      <div className="flex flex-col justify-center items-center gap-5 mt-20 md:mt-0 md:mt-36 md:flex-row md:h-1/3 md:justify-evenly md:gap-0">
         <Card></Card>
         <Card className="mb-10 md:mb-0"></Card>
       </div>
