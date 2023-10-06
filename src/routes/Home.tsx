@@ -1,9 +1,9 @@
 import Stat from "../components/Stat";
 import Card from "../components/Card";
 
-function App() {
+function Home() {
   return (
-    <div className="App h-screen bg-dark-grey font-Roboto content-center text-center md:justify-center md:gap-20">
+    <div className="h-screen bg-dark-grey font-Roboto content-center text-center md:justify-center md:gap-20">
       <div className="flex flex-col justify-center items-center md:gap-12">
         {/* Header */}
         <div className="flex flex-row justify-center items-center gap-28 mt-10">
@@ -84,4 +84,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
