@@ -1,4 +1,5 @@
 import React from "react";
+import data from "../mock-data.json";
 // import logo from "./logo.svg";
 import "./App.css";
 import Stat from "../components/Stat";
@@ -9,6 +10,13 @@ function App() {
   document.documentElement.style.height = "fill-available";
   document.documentElement.classList.add("bg-color-primary-background");
   // document.body.style.height = "100vh";
+
+  // Finding day of week from timestamp
+  let tmpStamp = 654524560;
+  let tmpDate = new Date();
+  tmpDate.setTime(tmpStamp * 1000);
+
+  console.log(tmpDate.getDay());
 
   return (
     <div className="App flex flex-col h-screen bg-color-primary-background font-Roboto content-center md:justify-center md:gap-20">
