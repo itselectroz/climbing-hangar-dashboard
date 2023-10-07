@@ -51,7 +51,7 @@ function Home() {
         </div>
 
         {/* Stats */}
-        <div className="flex flex-row flex-wrap justify-evenly items-center gap-y-20 mt-20 md:gap-40">
+        <div className="flex flex-row flex-wrap justify-evenly items-center gap-y-20 md:mt-20 md:gap-0 md:justify-evenly md:w-full">
           <div className="flex flex-col justify-center items-center gap-4 w-full md:w-auto">
             <div className="font-bold text-7xl text-white md:text-8xl">57</div>
             <div className="flex flex-col justify-center items-center gap-3 md:gap-1">
