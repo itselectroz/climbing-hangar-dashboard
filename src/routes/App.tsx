@@ -12,9 +12,10 @@ function App() {
   document.documentElement.classList.add("bg-color-primary-background");
   // document.body.style.height = "100vh";
 
-  // Find out current day
+  // Get current day
   let currentDay = new Date().getDay();
 
+  // Key for peak people for specific day
   let dayPeak: { [key: number]: string } = {
     0: "avgSundayPeak",
     1: "avgMondayPeak",
@@ -23,6 +24,17 @@ function App() {
     4: "avgThursdayPeak",
     5: "avgFridayPeak",
     6: "avgSaturdayPeak",
+  };
+
+  // Key for peak time for specific day
+  let dayPeakTime: { [key: number]: string } = {
+    0: "avgSundayPeakTime",
+    1: "avgMondayPeakTime",
+    2: "avgTuesdayPeakTime",
+    3: "avgWednesdayPeakTime",
+    4: "avgThursdayPeakTime",
+    5: "avgFridayPeakTime",
+    6: "avgSaturdayPeakTime",
   };
 
   return (
@@ -95,8 +107,11 @@ function App() {
             </div>
           </div>
           {/* Stat Components */}
-          <Stat className="md:order-first" content="2h 30m">
-            Until peak time
+          <Stat
+            className="md:order-first"
+            content={Calc[dayPeakTime[currentDay]].toString()}
+          >
+            Predicted peak time
           </Stat>
           <Stat content={Calc[dayPeak[currentDay]].toString()}>
             Expected peak for today
