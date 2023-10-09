@@ -2,31 +2,31 @@ import Stat from "../components/Stat";
 import Card from "../components/Card";
 import Calc from "../components/Calc";
 
+// Key for peak people for specific day
+let dayPeak: { [key: number]: string } = {
+  0: "avgSundayPeak",
+  1: "avgMondayPeak",
+  2: "avgTuesdayPeak",
+  3: "avgWednesdayPeak",
+  4: "avgThursdayPeak",
+  5: "avgFridayPeak",
+  6: "avgSaturdayPeak",
+};
+
+// Key for peak time for specific day
+let dayPeakTime: { [key: number]: string } = {
+  0: "avgSundayPeakTime",
+  1: "avgMondayPeakTime",
+  2: "avgTuesdayPeakTime",
+  3: "avgWednesdayPeakTime",
+  4: "avgThursdayPeakTime",
+  5: "avgFridayPeakTime",
+  6: "avgSaturdayPeakTime",
+};
+
 function Home() {
   // Get current day
   let currentDay = new Date().getDay();
-
-  // Key for peak people for specific day
-  let dayPeak: { [key: number]: string } = {
-    0: "avgSundayPeak",
-    1: "avgMondayPeak",
-    2: "avgTuesdayPeak",
-    3: "avgWednesdayPeak",
-    4: "avgThursdayPeak",
-    5: "avgFridayPeak",
-    6: "avgSaturdayPeak",
-  };
-
-  // Key for peak time for specific day
-  let dayPeakTime: { [key: number]: string } = {
-    0: "avgSundayPeakTime",
-    1: "avgMondayPeakTime",
-    2: "avgTuesdayPeakTime",
-    3: "avgWednesdayPeakTime",
-    4: "avgThursdayPeakTime",
-    5: "avgFridayPeakTime",
-    6: "avgSaturdayPeakTime",
-  };
 
   return (
     <div className="h-screen bg-dark-grey font-Roboto content-center text-center md:justify-center md:gap-20">
