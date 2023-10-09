@@ -1,7 +1,5 @@
-import React from "react";
-import Data from "../mock-data.json";
 // import logo from "./logo.svg";
-import "./App.css";
+import "./Home.css";
 import Stat from "../components/Stat";
 import Card from "../components/Card";
 import Calc from "../components/Calc";
