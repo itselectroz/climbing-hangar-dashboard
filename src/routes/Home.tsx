@@ -98,10 +98,10 @@ function Home() {
             className="md:order-first"
             content={Calc[dayPeakTime[currentDay]].toString()}
           >
-            Predicted peak time
+            Expected peak time
           </Stat>
           <Stat content={Calc[dayPeak[currentDay]].toString()}>
-            Expected peak for today
+            Expected peak persons
           </Stat>
         </div>
       </div>
