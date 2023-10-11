@@ -58,7 +58,7 @@ export default function Navbar() {
           </svg>
         </button>
         {/* Logo */}
-        <div className="mt-8 mb-16">
+        <div className="mt-8 mb-14">
           {/* TODO: make this as an svg import */}
           <svg
             viewBox="627.3679 252.3182 132.3521 37.0975"
