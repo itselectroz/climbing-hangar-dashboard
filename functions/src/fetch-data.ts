@@ -1,12 +1,12 @@
 import { onSchedule } from "firebase-functions/v2/scheduler";
 import { logger } from "firebase-functions";
-import { database } from "./admin";
+import { addOccupancyEntry } from "./shared/addOccupancyEntry";
 
 const PORTAL_URL =
   "https://portal.rockgympro.com/portal/public/d25534c18619c9ad36ef00175ac5702b/occupancy?&iframeid=occupancyCounter&fId=2101";
 
 export const fetchData = onSchedule(
-  "every 30 mins from 6:30 to 22:00",
+  "every 30 mins from 6:30 to 23:00",
   async (event) => {
     try {
       const response = await fetch(new Request(PORTAL_URL));
@@ -45,7 +45,7 @@ export const fetchData = onSchedule(
         count,
       };
 
-      await database.ref("/occupancy").push().set(entry);
+      addOccupancyEntry(entry);
 
       logger.info(`Added new occupancy entry: ${JSON.stringify(entry)}`);
     } catch (e) {

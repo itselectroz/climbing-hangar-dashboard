@@ -1,15 +1,6 @@
-import { useEffect } from 'react';
 import logo from '../logo.svg';
 import './App.css';
-import { functions } from '../firebase';
-import { httpsCallable } from 'firebase/functions';
-
 function App() {
-
-  useEffect(() => {
-    httpsCallable(functions, "fetchData")({});
-  }, [])
-
   return (
     <div className="App">
       <header className="App-header">

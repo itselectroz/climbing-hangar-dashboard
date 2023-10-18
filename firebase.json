@@ -26,6 +26,12 @@
     },
     "database": {
       "port": 9000
+    },
+    "firestore": {
+      "port": 8080
     }
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }
