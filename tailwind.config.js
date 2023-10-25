@@ -5,24 +5,24 @@ module.exports = {
     extend: {
       colors: {
         transparent: "transparent",
-        "color-primary-background": "#272B34",
-        "color-secondary-background": "#363a45",
-        "color-primary": "#378DFB",
-        "color-accent": "#e6407a",
-        "color-danger": "#FF4B4C",
-        "color-success": "#63DC93",
-        "color-primary-text": "#FFFFFF",
-        "color-secondary-text": "#a6a6a6",
+        "dark-grey": "#272B34",
+        "grey": "#363a45",
+        "blue": "#378DFB",
+        "pink": "#e6407a",
+        "red": "#FF4B4C",
+        "green": "#63DC93",
+        "white": "#FFFFFF",
+        "light-grey": "#a6a6a6",
       },
 
       fontFamily: {
-        sans: ["Roboto", "sans"],
+        'sans': ['Roboto', 'sans'],
       },
 
       width: {
-        card: "45%",
-      },
+        'card': '45%',
+      }
     },
   },
   plugins: [],
-};
+}

@@ -12,11 +12,11 @@
 
   width: 0%;
   height: 1px;
-  background-color: theme('colors.color-accent');
+  background-color: theme('colors.pink');
 }
 
 #navbar a.active {
-  color: theme('colors.color-primary-text');
+  color: theme('colors.white');
 }
 
 #navbar a.active::after {
@@ -24,7 +24,7 @@
 }
 
 #navbar a:hover {
-  color: theme('colors.color-primary-text');
+  color: theme('colors.white');
 }
 
 #navbar a:hover::after {

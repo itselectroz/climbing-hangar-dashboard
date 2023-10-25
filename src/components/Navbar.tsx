@@ -36,10 +36,10 @@ export default function Navbar() {
         aria-label="Navbar"
         className={`fixed inline-block ${
           visible ? "translate-x-0" : "-translate-x-full"
-        } transition-transform sm:translate-x-0 h-screen top-0 left-0 w-64 bg-color-secondary-background p-8 z-40`}
+        } transition-transform sm:translate-x-0 h-screen top-0 left-0 w-64 bg-grey p-8 z-40`}
       >
         <button
-          className="sm:hidden absolute top-5 left-5 text-color-primary-text text-xl"
+          className="sm:hidden absolute top-5 left-5 text-white text-xl"
           onClick={() => setVisible(false)}
         >
           <svg
@@ -126,7 +126,7 @@ export default function Navbar() {
         </div>
 
         {/* Links */}
-        <div className="flex flex-col gap-6 text-color-secondary-text">
+        <div className="flex flex-col gap-6 text-light-grey">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/dashboard">DASHBOARD</NavLink>
           <NavLink to="/membership">MEMBERSHIP</NavLink>

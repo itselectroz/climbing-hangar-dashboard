@@ -4,8 +4,8 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
-import App from "./routes/App";
 import Navbar from "./components/Navbar";
+import Home from "./routes/Home";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <Home />,
       },
     ],
   },
