@@ -28,7 +28,7 @@ function NavbarWrapper() {
   return (
     <>
       <Navbar />
-      <div className="sm:ml-64">
+      <div className="md:ml-64">
         <Outlet />
       </div>
     </>
