@@ -2,10 +2,6 @@
   "functions": {
     "source": "functions"
   },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
   "hosting": {
     "public": "build",
     "ignore": [
@@ -18,15 +14,24 @@
     "functions": {
       "port": 5001
     },
-    "firestore": {
-      "port": 8080
-    },
     "hosting": {
       "port": 5002
     },
     "ui": {
       "enabled": true
     },
-    "singleProjectMode": true
+    "singleProjectMode": true,
+    "pubsub": {
+      "port": 8085
+    },
+    "database": {
+      "port": 9000
+    },
+    "firestore": {
+      "port": 8080
+    }
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }
