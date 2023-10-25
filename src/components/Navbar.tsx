@@ -11,7 +11,7 @@ export default function Navbar() {
       <button
         type="button"
         aria-controls="navbar"
-        className="absolute inline-block sm:hidden top-5 left-5 text-white"
+        className="absolute inline-block md:hidden top-5 left-5 text-white"
         onClick={() => setVisible(!visible)}
       >
         <svg
@@ -36,10 +36,10 @@ export default function Navbar() {
         aria-label="Navbar"
         className={`fixed inline-block ${
           visible ? "translate-x-0" : "-translate-x-full"
-        } transition-transform sm:translate-x-0 h-screen top-0 left-0 w-64 bg-grey p-8 z-40`}
+        } transition-transform md:translate-x-0 h-screen top-0 left-0 w-64 bg-grey p-8 z-40`}
       >
         <button
-          className="sm:hidden absolute top-5 left-5 text-white text-xl"
+          className="md:hidden absolute top-5 left-5 text-white text-xl"
           onClick={() => setVisible(false)}
         >
           <svg
@@ -137,7 +137,7 @@ export default function Navbar() {
       <div
         className={`${
           visible ? "inline-block" : "hidden"
-        } sm:hidden w-screen h-screen absolute t-0 r-0 z-30 bg-black opacity-30`}
+        } md:hidden w-screen h-screen absolute t-0 r-0 z-30 bg-black opacity-30`}
         onClick={() => setVisible(false)}
       ></div>
     </>
