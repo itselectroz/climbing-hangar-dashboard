@@ -1,0 +1,10 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "occupancy": {
+      ".indexOn": [ "time" ],
+  		".read": true
+    }
+  }
+}

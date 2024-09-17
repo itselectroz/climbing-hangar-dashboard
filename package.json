@@ -26,7 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && npm run build-functions && firebase deploy",
-    "emulators": "firebase emulators:start"
+    "emulators": "firebase emulators:start",
+    "watch-functions": "tsc --build functions/tsconfig.json --watch"
   },
   "eslintConfig": {
     "extends": [

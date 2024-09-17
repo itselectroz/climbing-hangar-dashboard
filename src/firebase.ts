@@ -2,6 +2,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
 import { getFunctions, connectFunctionsEmulator } from "firebase/functions";
+import { connectDatabaseEmulator, getDatabase } from "firebase/database";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,7 +14,8 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_PROJECT_ID,
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID
+  appId: process.env.REACT_APP_APP_ID,
+  databaseUrl: process.env.REACT_APP_DATABASE_URL,
 };
 
 // Initialize Firebase
@@ -20,9 +23,13 @@ export const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 if (process.env.REACT_APP_EMULATOR) {
-  connectFirestoreEmulator(db, 'localhost', 8080);
+  connectFirestoreEmulator(db, "localhost", 8080);
 }
 
 export const functions = getFunctions(app);
 if (process.env.REACT_APP_EMULATOR)
-  connectFunctionsEmulator(functions, 'localhost', 5001);
+  connectFunctionsEmulator(functions, "localhost", 5001);
+
+export const database = getDatabase(app);
+if (process.env.REACT_APP_EMULATOR)
+  connectDatabaseEmulator(database, 'localhost', 9000);
